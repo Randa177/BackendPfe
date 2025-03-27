@@ -1,14 +1,5 @@
 var express = require('express');
 var router = express.Router();
-<<<<<<< HEAD
-
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.json('respond with a resource');
-});
-
-module.exports = router;
-=======
 const userController = require('../controllers/userController');
 const upload = require('../middlewares/uploadFile');
 const {requireAuthUser} = require('../middlewares/authMiddleware');
@@ -31,4 +22,3 @@ router.delete('/deleteUserById/:id',userController.deleteUserById);
 router.post('/addUserClientWithImg',upload.single("image_user"),userController.addUserClientWithImg); 
 
 module.exports = router;
->>>>>>> 0c4e130 (test)
